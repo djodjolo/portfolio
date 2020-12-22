@@ -1,13 +1,13 @@
 <template>
 <div>
   <div id="nav">
-      <router-link to="/">POCETNA</router-link> 
-      <router-link to="about">PUBLIKACIJE</router-link> 
-      <router-link to="about">BLOG</router-link> 
+      <router-link to="/">HOME</router-link> 
+      <router-link to="about">PUBLICATIONS</router-link> 
       <router-link to="about">BLOG</router-link> 
       <router-link to="about">CV</router-link> 
-      <router-link to="about">PROJEKTI</router-link> 
-      <router-link to="about">BIOGRAFIJA</router-link>
+      <router-link to="about">PROJECTS</router-link> 
+      <router-link to="about">BIO</router-link>
+      <router-link to="about">CONTACT</router-link>
     </div>
     <hr>
   <div class="hello">
@@ -44,7 +44,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'EnHome',
   props: {
     msg: String
   }
