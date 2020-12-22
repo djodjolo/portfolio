@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import PageNotFound from '../views/PageNotFound.vue'
 
 
 const routes = [
@@ -35,7 +36,20 @@ const routes = [
         component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
       }
     ]
+  },
+  {
+    path: "/en/cv",
+    component: () => import('../components/CV.vue'),
+  },
+  {
+      path: "/:catchAll(.*)",
+      name: 'page-not-found',
+      component: PageNotFound,
+      meta: {
+        requiresAuth: false
+      }
   }
+
 ]
 
 const router = createRouter({

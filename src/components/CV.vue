@@ -1,24 +1,5 @@
 <template>
-<div>
- 
- <div id="nav">
-   <router-link v-for="item in srData" v-bind:key="item.id" v-bind:to="item.link">{{item.title}}</router-link>
- </div>
-
-  <!-- <div id="nav">
-      <router-link to="/">HOME</router-link> 
-      <router-link to="about">PUBLICATIONS</router-link> 
-      <router-link to="about">BLOG</router-link> 
-      <router-link to="about">CV</router-link> 
-      <router-link to="about">PROJECTS</router-link> 
-      <router-link to="about">BIO</router-link>
-      <router-link to="about">CONTACT</router-link>
-    </div> -->
-          <hr>
-  <div class="hello">
-        EN
-        {{srData[0].body}}
-        </div>
+<div v-html="srData[0].body">
   </div>
 </template>
 
@@ -26,7 +7,7 @@
 import db from './firebaseInit';
 
 export default {
-  name: 'EnHome',
+  name: 'CV',
   data () {
         return{
             srData:[]
@@ -41,7 +22,6 @@ export default {
                    'visibility' : doc.data().visibility,
                    'link' : doc.data().link,
                    'body' : doc.data().body
-
                 }
                 this.srData.push(data);
             })

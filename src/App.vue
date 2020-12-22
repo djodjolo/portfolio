@@ -4,7 +4,7 @@
       <div>
         <h1>Djordje Milosevic</h1>
       </div>
-        <div>
+        <div id="languages">
           <h3> <router-link to='/'>SR</router-link> - <router-link to='/en'>EN</router-link></h3>  
         </div>
     </div>
@@ -39,6 +39,11 @@
 }
 
 #nav a.router-link-exact-active {
+  color: #2585F6;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+#languages a.router-link-exact-active {
   color: #2585F6;
   text-decoration-line: underline;
   text-decoration-style: dotted;
